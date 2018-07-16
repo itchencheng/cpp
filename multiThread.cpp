@@ -1,9 +1,8 @@
 
-#include "xx.h"
+#include "multiThread.h"
 
-#include "helper.h"
 
-//#define ORDER
+#define ORDER
 
 
 
@@ -82,3 +81,5 @@ void task2(void * ptr)
 
     return ;
 }
+
+

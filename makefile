@@ -1,8 +1,18 @@
-# Makefile
-# draft version
+EXEC=a.out
+OBJS=main.o multiThread.o
 
-build:
-	g++ xx.cpp main.cpp -std=c++11 -lpthread -o a.out
+
+build: $(OBJS)
+	g++ -o $(EXEC) $(OBJS) -lpthread
+
+main.o: main.cpp multiThread.h
+	g++ -c main.cpp -std=c++11 -lpthread
+
+multiThread.o: multiThread.cpp multiThread.h
+	g++ -c multiThread.cpp -std=c++11 -lpthread
+
+clean:
+	del $(OBJS)
 
 run:
-	./a.out
+	./$(EXEC)

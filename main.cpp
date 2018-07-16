@@ -1,8 +1,4 @@
-
-
-
-#include "xx.h"
-#include "helper.h"
+#include "multiThread.h"
 
 int main()
 {
@@ -14,11 +10,12 @@ int main()
     context->B_done_flag    = false;
     context->C_done_flag    = false;
 
-    void * ptr = (void *)context;
+    void * ptr;
+    ptr = (void *)context;
 
     std::thread thread1(task1, ptr);
     std::thread thread2(task2, ptr);
-#if 0
+
     printf("lets begin:\n");
     context->main_done_mutex.lock();
     context->main_done_flag = true;
@@ -34,7 +31,7 @@ int main()
     }    
 
     printf("all done !\n");
-#endif
+
     free(context);
 
     return 0;

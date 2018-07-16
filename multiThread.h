@@ -1,8 +1,20 @@
+/*******************************************************
+* filename    :    multiThread.h
+* description :    cpp file
+* author      :    chencheng
+* date        :    20180716
+*******************************************************/
 
-#ifndef __HELPER_H_
-#define __HELPER_H_
+#ifndef __XX_H_
+#define __XX_H_
 
-struct Context_t {
+#include <cstdio>
+#include <iostream>
+#include <thread>
+#include <mutex>
+#include <condition_variable>
+
+typedef struct {
     bool                     main_done_flag;
     std::mutex               main_done_mutex;
     std::condition_variable  main_done_cv;    
@@ -18,6 +30,14 @@ struct Context_t {
     bool                     C_done_flag;
     std::mutex               C_done_mutex;
     std::condition_variable  C_done_cv;
-};
+} Context_t, *pContext_t;
 
-#endif
+
+
+void task1(void * ptr);
+
+void task2(void * ptr);
+
+
+
+#endif //__XX_H_
