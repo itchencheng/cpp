@@ -1,7 +1,7 @@
 /*
  ******************************************************************************
- *       Filename:    List.h
- *    Description:    Header file
+ *       Filename:    List.hpp
+ *    Description:    Header plus plus file
  *       
  *        Version:    1.0
  *        Created:    2018-07-20
@@ -15,12 +15,12 @@
 #define __LIST_H
 
 
-/** @class: List
-*
-*   @brief: link list class
-*
-*/
-template <class DataType>
+/* @class: List
+ *
+ * @brief: link list class
+ *
+ */
+template <typename DataType>
 class List
 {
 private:
@@ -44,7 +44,7 @@ public:
  * 
  * @param:    initSize    initial size
  */
-template <class DataType>
+template <typename DataType>
 List<DataType>::List(int initSize)
 {
     data = new DataType [initSize];
@@ -54,7 +54,7 @@ List<DataType>::List(int initSize)
 }
 
 
-template <class DataType>
+template <typename DataType>
 List<DataType>::~List()
 {
     delete [] data;
@@ -64,14 +64,14 @@ List<DataType>::~List()
 }
 
 
-template <class DataType>
+template <typename DataType>
 int List<DataType>::getCurrentLength()
 {
     return currentLength;
 }
 
 
-template <class DataType>
+template <typename DataType>
 int List<DataType>::getMaxSize()
 {
     return maxSize;
