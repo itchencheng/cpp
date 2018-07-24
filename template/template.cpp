@@ -1,15 +1,15 @@
 /*
- ******************************************************************************
- *       Filename:  template.cpp
- *    Description:  cpp file
- *       
- *        Version:  1.0
- *        Created:  2018-07-20
- *         Author:  chencheng
- *
- *        History:  initial draft
- ******************************************************************************
- */
+*******************************************************************************
+*       Filename:  template.cpp
+*    Description:  cpp file
+*       
+*        Version:  1.0
+*        Created:  2018-07-20
+*         Author:  chencheng
+*
+*        History:  initial draft
+*******************************************************************************
+*/
 
 #include <iostream>
 #include "List.hpp"
