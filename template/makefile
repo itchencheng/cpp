@@ -1,9 +1,11 @@
 
+GPP=g++ -std=c++11
+
 run: build
 	./a.out
 
 build: 
-	g++ template.cpp -o a.out
+	$(GPP) template.cpp -o a.out
 
 clean:
 	rm -rf *.o a.out

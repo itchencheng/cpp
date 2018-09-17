@@ -49,7 +49,7 @@ List<DataType>::List(int initSize)
 {
     data = new DataType [initSize];
 
-    maxSize       = initSize;
+    maxSize = initSize;
     currentLength = 0;
 }
 
@@ -59,7 +59,7 @@ List<DataType>::~List()
 {
     delete [] data;
 
-    maxSize       = 0;
+    maxSize = 0;
     currentLength = 0;
 }
 
